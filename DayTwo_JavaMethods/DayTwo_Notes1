@@ -1,0 +1,25 @@
+** __Java Methods__ **
+=> A method is a block of code which only runs when it is called.
+=> You can pass data, known as parameters into a method.
+=> Methods are used to perform certain actions, and they are called functions.
+
+*** Static methods and Instance methods
+-> Created using the static keyword and retrieved without creating an object.
+-> access only static variables and method.
+-> cannot use this keyword within static method. & does not support runtime polymorphism
+
+-> requires an object of its class to be invoked.
+-> can access both static and instance members.
+-> can use this keyword to refer to the current object. & support runtime polymorphism
+
+** Parameters and Arguments
+=> Information can be passed to methods as a parameter. Parameter acts as a variables inside the method.
+=> When a parameter is passed to the method, it is called argument.
+
+** Java Return
+=> If you want method to return a value, you can use primitive datatypes instead of void.
+=> And Use return keyword inside the method.
+
+** Method overloading
+=> Method overloading means multiple methods having same method name but with different parameters.
+
