@@ -31,5 +31,20 @@ public class Calculate {
         }else {
             System.out.println("Invalid Input");
         }
-    }
+
+        //TypeCasting String to int
+
+        String number = "1234";
+        int makeInteger = Integer.parseInt(number);
+        System.out.println(makeInteger);
+
+        //typecast
+        double d = 25.55;
+        int a = (int) d; //explicit typecasting (Manual/Narrowing Conversion)
+        System.out.println(a); //25
+
+        int b = 25;
+        double c = b; // implicit typecasting (Automatic/Widening Conversion)
+        System.out.println(c); //25.0
+     }
 }
