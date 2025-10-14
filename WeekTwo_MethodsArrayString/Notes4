@@ -1,0 +1,109 @@
+** __Java Array__ **
+=> Arrays are used to store multiple values in a single variables instead of declaring separate variables for each value.
+=> To declare an array, define the variable with square bracket[].
+
+=> Array = collection of values of the same data type
+            think of it as variable that can store more than 1 values
+Example: String[] fruits = { "apple", "banana", "coconut", "orange"}; // i.e Array of string
+
+** Accessing the element of array
+=> fruits[0] //apple
+=> fruits[3] //orange
+
+** Changing an array element
+=> fruits[0] = "pineapple";
+
+** __Array Length__ **
+=> To find how many elements an array has, we use the length property.
+    fruits.length; //4
+
+** __Array Loop__ **
+=> You can loop through the array elements with the for loop.
+=> Using for loop to print each element one by one
+    for(int i = 0; i<fruits.length; i++){
+        print(fruits[i] + ", ");
+    }
+
+    OR (Use Enhanced for loop)
+    for(int fruit: fruits){
+        print(fruit + ",");
+    }
+
+    // apple, banana, coconut, orange
+
+Array classes Methods
+.compare(), .equals(), .toString() etc
+** Sort Method
+=> If you want to sort array, we have built in sort() method.
+import java.util.Arrays
+    Arrays.sort(fruits);
+
+** Fill Method
+=> To fill array with given values
+Arrays.fill(fruits, "tomato");  //Note: This will fill you fruits array of string to "tomato"
+  //output: tomato, tomato, tomato, tomato
+
+
+** Empty Array **
+    String[] fruits = {};
+    [[Note: If you create an empty array, we cannot assign it later.]]
+    such as, fruits[0] = "apple"; X
+
+    SO, SET AN EMPTY ARRAY WITH A SIZE
+    String[] fruits = new String[3];  // Static sizing
+    fruits[0] = "apple"
+    fruits[1] = "banana"
+    fruits[2] = "orange"
+    fruits.length; //3
+
+    [[Note: This is static size of an empty array]] WE CAN MAKE IT DYNAMIC SIZE BY ASKING A USER
+
+    Scanner sc = new Scanner(System.in);
+    print("Enter a size of array: ");
+    int size = sc.nextInt();
+
+    String[] fruits = new string[size];
+
+    //asking user to enter a element
+    for(int i =0; i<fruits.length; i++){
+        print("Enter an element: ");
+        fruits[i] = sc.nextLine();
+    }
+
+    //printing all elements
+    for(String fruit: fruits){
+        print(fruit + ", ");
+    }
+
+    NOTE: => ALWAYS SET A SIZE OF ARRAY
+          => USE LENGTH PROPERTY TO FIND ARRAY LENGTH
+          => USE FOR LOOP TO LOOP THROUGH AN ELEMENT
+
+** __2D Array__ **
+=> An array where each element is an array.
+=> Useful for storing matrix of array.
+
+Example:
+    //1D Array
+String[] fruits = {"apple", "mango", "banana"};
+String[] vegetables = {"potato", "onion", "carrot"};
+String[] meats = {"chicken","pork", "beef"};
+
+    //2D Array
+String[][] groceries = {fruits, vegetables, meats};
+    OR
+String[][] groceries = {{"apple", "mango", "banana"},
+                        {"potato", "onion", "carrot"},
+                        {"chicken","pork", "beef"}};
+
+//Displaying
+
+    for(String[] foods: groceries){
+        for(String food: foods){
+            print(food + " " );
+        }
+        print();
+    }
+
+//Accessing and changing elements in 2D
+    groceries[0][1] = "pineapple";

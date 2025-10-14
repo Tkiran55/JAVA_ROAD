@@ -1,0 +1,20 @@
+** __ Java String__ **
+=> Strings are used to store text.
+=> String variables contains a collections of characters surrounded by double quotes. (" ")
+eg. String name = "Java"
+
+String methods
+    .length()
+    .charAt(index)
+    .indexof("");
+    .lastIndexof("")
+    .toUpperCase()
+    .toLowerCase()
+    .trim()
+    .replace("","");
+    .isEmpty() /boolean
+    .contains()
+    .equals();
+    .equalsIgnoreCase();
+
+    .subString(start, end) // substring method used to extract a portion of a string.
