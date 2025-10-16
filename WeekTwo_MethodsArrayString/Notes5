@@ -6,8 +6,8 @@ eg. String name = "Java"
 String methods
     .length()
     .charAt(index)
-    .indexof("");
-    .lastIndexof("")
+    .indexOf("");
+    .lastIndexOf("")
     .toUpperCase()
     .toLowerCase()
     .trim()
@@ -18,3 +18,42 @@ String methods
     .equalsIgnoreCase();
 
     .subString(start, end) // substring method used to extract a portion of a string.
+
+** __StringBuffer__ **;
+=> StringBuffer in java represents a sequence of characters that can be modified.
+    which means we can change the content of the StringBuffer without creating a new object everytime.
+=> It represents mutable sequence of characters.
+
+Features: -> unlike String, we can modify the context of the StringBuffer without creating an new object.
+          -> all methods of StringBuffer are synchronized, making it safe to use in multithreaded environment.
+          -> ideal for scenarios with frequent modifications like append, insert, delete or replace operation.
+
+** __StringBuilder__ **
+=> It provides a mutable sequence of characters.
+=> Unlike String (which is immutable), StringBuilder allows in place modification,
+    making it faster and memory efficient for frequent String operations.
+
+Key Points
+-> It allows similar functionality to StringBuffer but without thread safety.
+-> StringBuilder is not synchronized, making it faster and more efficient than StringBuffer in singleThreaded applications.
+-> Use StringBuffer only when thread safety is needed, otherwise prefer StringBuilder for better performance.
+
+Some of the methods are:
+.append() , .insert() , .replace() , .delete() , .reverse() , .length() , .toString() etc.
+
+***** STRING VS STRING BUILDER VS STRING BUFFER
+
+String -> String are immutable (create new object on modification)
+       -> It is thread safe.
+       -> It is slow because, it create an object each time.
+       -> Fixed, unchanging strings
+
+StringBuilder -> StringBuilder are mutable (modifies in place)
+       -> It is not thread safe.
+       -> It is fast because, no creation an object.
+       -> Single threaded string manipulation
+
+StringBuffer -> StringBuffer are mutable (modifies in place)
+       -> It is thread safe.
+       -> It is slower due to synchronization overhead.
+       -> Multithreaded string manipulation
