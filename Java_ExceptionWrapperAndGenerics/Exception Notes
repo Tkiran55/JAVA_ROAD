@@ -1,0 +1,54 @@
+1. What Is an Exception?
+
+An exception is an event that interrupts the normal flow of a program
+— usually caused by something unexpected (like dividing by zero or accessing a missing file).
+
+int x = 10 / 0;  // ⚠️ ArithmeticException: divide by zero
+Without handling this, your program will crash.
+
+2. Handling Exceptions with try-catch
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Cannot divide by zero!");
+        }
+        System.out.println("Program continues smoothly.");
+    }
+}
+
+//Output: Error: Cannot divide by zero!
+          Program continues smoothly.
+
+Note:
+The try block tests the risky code.
+The catch block catches the exception and handles it safely.
+
+3. finally Block
+
+You can add a finally block that always runs, whether an exception occurs or not:
+It’s typically used to release resources like closing files, network connections, or scanners.
+
+try {
+    int[] numbers = {1, 2, 3};
+    System.out.println(numbers[5]);
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Index out of bounds!");
+} finally {
+    System.out.println("This block always executes.");
+}
+
+Q. Why is it a bad idea to write an empty catch block (e.g., catch(Exception e){})?
+
+   Because an empty catch block hides the error without handling it.
+   This makes debugging difficult since you lose valuable information about what went wrong.
+   A better approach is to at least log the error or display a meaningful message to the user.
+
+Q. Why is exception handling better than simply letting a program crash?
+
+   Because exception handling allows your program to detect, respond, and recover from unexpected situations without stopping entirely.
+   Instead of crashing, your program can show a clear message or perform a safe fallback action.
+   This creates a better user experience and makes the software more robust and professional.

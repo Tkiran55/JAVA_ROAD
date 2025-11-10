@@ -1,0 +1,65 @@
+** __Java Identifiers__ **
+=> Identifiers in java is the name given to variables, classes, methods, packages, interfaces etc.
+=> These are unique names used to identify programming elements.
+=> Every variable must be identified with a unique name.
+
+** __Reserved Words__ **
+=> Any programming language reserves some words to represent functionalities defined by that programming language.
+=> Example: abstract, continue, for, protected, public, if, do, static, import, break, Default, boolean etc.
+
+** __KeyWords__ **
+=> In java, keywords are the reserved words that have some predefined meanings and are used by Java compiler.
+=> For some internal process or represent some predefined actions.
+=> These keywords can not be used as an identifiers such as variable name, method name, class name, or object names.
+
+** __Data Types__ **
+Q. Why data types matter in java?
+=> Memory efficiency, performance. code clarity.
+
+DATA TYPES CATEGORIES
+a) Primitive DataType (8)
+    => These are the basic building block that stores simple values directly in memory (Stack).
+    => Example: byte, short, int, long, float, double, char, boolean
+    => PDT are Faster.
+
+b) Non-Primitive DataType (Reference Type)
+    => These are reference types that store memory addresses of objects. (Heap)
+    => Example: String, Array, Interfaces nad Object.
+    => Non-PDT are slower
+
+Note: Default Boolean value in Java is always false.
+
+** __Java Variables__ **
+=> In java, variables are container that stores data in memory.
+
+Key components of variables in Java:
+a) DataType     b) Variable name        c) Value
+
+Syntax:     dataType variableName = value;
+            int age = 25;
+
+Types of Variables
+a) static variable (class variable): static keyword is used.
+    => shared among all objects of the class
+    => belongs to class, not a specific object
+    => can be accessed directly inside static method like main().
+
+b) non-static variable (interface variable)
+    => Belong to an object (each object gets its own copy)
+    => can only be accessed using an object reference
+
+c) local variable
+    => declared inside a method, constructor, or block.
+    => only exists during the method is executed.
+
+** __Type Casting__ **
+=> When you convert one type into another.
+
+a) Implicit Casting(small -> large)
+        int x = 5;
+        double y = x;
+
+b) Explicit Casting(large -> small)
+        double a = 9.8;
+        int b = (int) a;
+

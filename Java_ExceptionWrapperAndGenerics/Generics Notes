@@ -1,0 +1,73 @@
+1. What Are Generics?
+
+Generics let you create classes, interfaces, and methods
+that work with different data types while maintaining type safety.
+
+Without generics, you’d often have to cast objects manually, which is error-prone.
+Generics allow the compiler to check types at compile time, preventing many runtime errors.
+
+*******************************************************************************************
+
+Example: Without Generics
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList list = new ArrayList();
+        list.add("Hello");
+        list.add(123); // Works, but risky!
+
+        String text = (String) list.get(0); // Needs casting
+        System.out.println(text);
+    }
+}
+
+
+Here, you could accidentally add a wrong type (like an Integer) — which could cause a runtime error later.
+
+💻 Example: With Generics
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("Hello");
+        // words.add(123);  // ❌ Compile-time error!
+
+        String text = words.get(0);  // No casting needed
+        System.out.println(text);
+    }
+}
+
+✅ Safer, cleaner, and easier to maintain!
+
+
+
+<T> type parameter (placeholder that gets replaced with a real type).
+
+*** Explanation of Generics Exe ***
+1. Creating a Generic Class (Box<T>)
+class Box <T>: The <T> right after the class name signifies that Box is a generic class.
+T is a Type Parameter, a placeholder that will be replaced by a real type (like String or Double) when the class is instantiated.
+
+T item;: The item field is declared to be of type T.
+This means the box can hold an item of any single type.
+
+public void setItem(T item) and public T getItem():
+The getter and setter methods use the type parameter T, ensuring type safety for all interactions with the item.
+
+2. Using the Generic Class in Main
+The main method shows how you bind the Type Parameter T to a specific type:
+
+Box<String> box = new Box<>();: Here,
+T is replaced by String. The compiler now knows this specific box can only hold String objects.
+
+box.setItem("Doll"); is valid.
+
+box.setItem(123); would be a compile-time error.
+
+Box<Double> box1 = new Box<>();: Here, T is replaced by Double.
+This box1 can only hold Double objects.
+
+box1.setItem(4.5); is valid.
+This clearly illustrates how generics provide type safety and allow you to reuse the same class logic (Box) for multiple types without casting or code duplication.
