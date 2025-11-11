@@ -1,0 +1,50 @@
+Threads and Concurrency — Making Java Programs Run in Parallel
+
+1. What Are Threads?
+A thread is like a mini-program running inside your main program.
+Multiple threads can execute simultaneously, allowing your program to do multiple tasks at once — this is called concurrency.
+
+Example use cases:
+-Downloading a file while showing a progress bar
+-Handling multiple client connections in a server
+-Running animations or timers without freezing the UI
+
+Note:
+** HOw to create a Thread?
+=> option 1: Extend the Thread class (simple)
+=> option 2: implement the Runnable interface (better)
+
+What does join() do?
+
+When you call thread.join(), the current thread (e.g., the main thread) waits until the other thread finishes before continuing.
+It’s like saying:
+“Hey, I’ll wait here until you’re done — then I’ll move on.”
+
+** When to use join()
+Use it when:
+- You need to wait for a thread to complete before continuing.
+- You want to sequence multithreaded operations safely.
+- You need deterministic order, e.g. loading data before processing it
+
+Questions:
+
+💬 1. What is the main purpose of using multiple threads in a Java program?
+
+The main purpose is to allow a program to perform multiple tasks simultaneously — improving efficiency and responsiveness.
+For example, in a chat app, one thread can handle sending messages while another handles receiving them, so the UI doesn’t freeze.
+
+🧠 Analogy: Think of threads as chefs in a kitchen — each can work on a different dish at the same time to serve customers faster.
+
+💬 2. Why can un_synchronized threads cause bugs or inconsistent results?
+
+When multiple threads access and modify the same data at the same time, they can interfere with each other’s operations, causing race conditions.
+This leads to unpredictable results, like losing updates or corrupting data.
+
+🧠 Example: Two people withdrawing from the same bank account at once — if not coordinated, the balance might become incorrect.
+
+💬 3. What does the synchronized keyword do, and when would you use it?
+
+The synchronized keyword ensures that only one thread at a time can execute a block of code or method that manipulates shared resources.
+You use it when multiple threads share mutable data — to prevent race conditions and maintain data integrity.
+
+🧠 Analogy: It’s like giving one person the only key to a locked room — others must wait their turn before entering.

@@ -52,3 +52,17 @@ Q. Why is exception handling better than simply letting a program crash?
    Because exception handling allows your program to detect, respond, and recover from unexpected situations without stopping entirely.
    Instead of crashing, your program can show a clear message or perform a safe fallback action.
    This creates a better user experience and makes the software more robust and professional.
+
+Q. Why is it better to handle exceptions rather than letting the program crash?
+
+   Because unhandled exceptions cause the program to terminate abruptly, leading to a poor user experience and potential data loss.
+   By handling exceptions, you can:
+
+   - Show meaningful error messages instead of cryptic stack traces.
+   - Recover safely (e.g., retry a connection, skip bad data).
+   - Ensure critical cleanup (like closing files or releasing resources).
+
+
+Keyword	    Used                    Inside	Purpose
+throw	    Method body	            To manually throw an exception instance
+throws	    Method signature	    To declare that a method might throw an exception

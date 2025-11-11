@@ -1,0 +1,32 @@
+What Is File Handling?
+
+File handling allows Java programs to read data from and write data to files on your computer.
+It’s essential for saving user input, configurations, logs, or any persistent data.
+
+****** How to write a file (4 popular options) ******
+// FileWriter  = good for small or medium-sized text files.
+// BufferWriter = better performance for larger amount of text.
+// PrintWriter = best for structured data, like reports or logs.
+// FileOutputStream = best for binary files(eg. images, audio)
+
+****** How to read a file (3 popular options) ******
+// BufferReader + FileReader = best for reading text files line by line.
+// FileInputStream = best for binary files(eg. images, audio)
+// RandomAccessFile = best for read/write specific portions of a large files.
+
+1. Why should you always close a file after reading or writing?
+
+Closing a file is important because it frees system resources and ensures that all data is properly saved (flushed) to disk.
+If you forget to close it, the program may lose data or lock the file so other programs can’t access it.
+
+🧠 Analogy: It’s like closing a notebook after writing — if you leave it open, the pages might get damaged or lost.
+
+💬 2. What’s the difference between FileWriter and FileReader in Java?
+FileWriter is used to write data to a file (output).
+FileReader is used to read data from a file (input).
+You can think of them as opposite directions — FileWriter puts data into the file, while FileReader takes data out of it.
+
+💬 3. What kind of exception might occur during file handling, and how can we handle it gracefully?
+A FileNotFoundException or IOException may occur — for example, if the file doesn’t exist, you lack permissions, or the disk is full.
+We handle these by using a try-catch block, allowing the program to continue running and
+show a meaningful error message instead of crashing.

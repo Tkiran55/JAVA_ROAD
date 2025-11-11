@@ -70,4 +70,25 @@ Box<Double> box1 = new Box<>();: Here, T is replaced by Double.
 This box1 can only hold Double objects.
 
 box1.setItem(4.5); is valid.
-This clearly illustrates how generics provide type safety and allow you to reuse the same class logic (Box) for multiple types without casting or code duplication.
+This clearly illustrates how generics provide type safety and
+allow you to reuse the same class logic (Box) for multiple types without casting or code duplication.
+
+💬 1. Why is using generics safer than using raw types (non-generic collections)?
+
+Because generics allow compile-time type checking, preventing type errors before the program runs.
+In raw types, you can accidentally add incompatible data (like mixing String and Integer),
+which can cause runtime exceptions.
+Generics ensure that a collection only contains one specific type — improving safety, readability, and reliability.
+
+💬 2. How does the compiler help enforce type safety when you use generics?
+
+The compiler verifies that every item added to or retrieved from a generic collection matches the specified type parameter.
+For example, if you declare ArrayList<String>, the compiler blocks adding integers or other objects —
+preventing invalid operations before the code runs.
+
+💬 3. Can you think of a real-world example where a method should work with multiple data types?
+
+Yes! A data container, logger, or utility function can work with multiple data types.
+Example:
+A printBox(T item) method could accept String, Integer, or Double
+— making the code reusable for any data type without rewriting the logic for each.
