@@ -1,0 +1,74 @@
+# Java List Interface
+=> The List interface is part of the Java Collections Framework and represents an ordered collection of elements.
+=> You can access elements by their index, add duplicates, and maintain the insertion order.
+
+Since List is an interface, you cannot create a List object directly.
+Instead, you use a class that implements the List interface, such as:
+
+- ArrayList - like a resizable array with fast random access
+- LinkedList - like a train of cars you can easily attach or remove
+
+Tip: Use List when you care about order, you may have duplicates, and want to access elements by index.
+
+# Common List Methods
+Method	    Description
+add()	    Adds an element to the end of the list
+get()	    Returns the element at the specified position
+set()	    Replaces the element at the specified position
+remove()	Removes the element at the specified position
+size()	    Returns the number of elements in the list
+
+# Java ArrayList
+=> An ArrayList is like a resizable array.
+=> It is part of the java.util package and implements the List interface.
+
+1. Create an ArrayList
+=> To use an ArrayList, you must first import it from java.util:
+
+Example: Create an ArrayList object called cars that will store strings:
+
+    import java.util.ArrayList; // Import the ArrayList class
+
+    ArrayList<String> cars = new ArrayList<String>(); // Create an ArrayList object
+
+Now you can use methods like add(), get(), set(), and remove() to manage your list of elements.
+
+(Assignment: test all methods)
+
+# Sort an ArrayList
+Another useful class in the java.util package is the Collections class,
+which include the sort() method for sorting lists alphabetically or numerically:
+
+Collections.sort(cars); (asc order)
+Collections.sort(cars, Collections.reverseOrder()); // Sort cars in reverse order(desc)
+
+# Java LinkedList
+The LinkedList class is almost identical to the ArrayList:
+
+LinkedList<Wrapper Class> obj = new LinkedList<>();
+
+How the ArrayList works
+-The ArrayList class has a regular array inside it.
+-When an element is added, it is placed into the array.
+-If the array is not big enough, a new, larger array is created to replace the old one and the old one is removed.
+
+How the LinkedList works
+-The LinkedList stores its elements in "containers."
+-The list has a link to the first container and each container has a link to the next container in the list.
+-To add an element to the list, the element is placed into a new container and
+that container is linked to one of the other containers in the list.
+
+When To Use
+Use an ArrayList for storing and accessing data, and LinkedList to manipulate data.
+
+LinkedList Methods
+For many cases, the ArrayList is more efficient as it is common to need access to random elements in the list, but the LinkedList provides several methods to do certain operations more efficiently:
+
+Method	        Description
+addFirst()	    Adds an element to the beginning of the list
+addLast()	    Add an element to the end of the list
+removeFirst()	Remove an element from the beginning of the list
+removeLast()	Remove an element from the end of the list
+getFirst()	    Get the element at the beginning of the list
+getLast()	    Get the element at the end of the list
+
