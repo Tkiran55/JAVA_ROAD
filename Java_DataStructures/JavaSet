@@ -1,0 +1,48 @@
+# Java Set Interface
+=> The Set interface is part of the Java Collections Framework and is used to store a collection of unique elements.
+
+Unlike a List, a Set does not allow duplicates,
+and it does not preserve the order of elements (unless you're using TreeSet or LinkedHashSet).
+
+# Common classes that implement Set:
+- HashSet - fast and unordered
+- TreeSet - sorted set
+- LinkedHashSet - ordered by insertion
+        Tip: Use a Set when you need to store unique values only.
+
+# Common Set Methods
+  Method	    Description
+  add()	        Adds an element if it's not already in the set
+  remove()	    Removes the element from the set
+  contains()	Checks if the set contains the element
+  size()	    Returns the number of elements
+  clear()	    Removes all elements
+
+#Java HashSet
+=> A HashSet is a collection of elements where every element is unique.
+=> It is part of the java.util package and implements the Set interface.
+
+    HashSet<Wrapper Class> obj = new HashSet<>();
+
+some methods:
+- cars.contains("Mazda"); //Check If an Element Exists
+- cars.remove("Volvo"); //remove an element
+- cars.clear(); //remove all the element
+- cars.size(); //cunt how many unique element are in the set
+
+#Java TreeSet
+=> A TreeSet is a collection that stores unique elements in sorted order.
+=> It is part of the java.util package and implements the Set interface.
+
+    TreeSet<Wrapper Class> obj = new TreeSet<>();
+
+ Tip: Unlike HashSet, which has no order, TreeSet keeps its elements sorted automatically.
+
+#Java LinkedHashSet
+=> A LinkedHashSet is a collection that stores unique elements and remembers the order they were added.
+=> It is part of the java.util package and implements the Set interface.
+
+    LinkedHashSet<Wrapper Class> obj = new LinkedHashSet<>();
+
+ Tip: Use LinkedHashSet when you want a set that does not allow duplicates and keeps the original insertion order.
+
