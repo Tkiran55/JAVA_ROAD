@@ -82,4 +82,20 @@ public class BankManagement {
         }
     }
 
+    public boolean transfer(int fromId, String toUsername, double amount) throws SQLException {
+        String sql = "select id from accounts where username = ?";
+        try(Connection connection = DbConnection.getConnection();
+        PreparedStatement statement = connection.prepareStatement(sql)){
+            statement.setString(1, toUsername);
+
+            ResultSet rs = statement.executeQuery();
+            if(!rs.next()) return false;
+            int toId = rs.getInt("id");
+
+            if(!withdraw(fromId,amount)) return false;
+
+            return deposit(toId, amount);
+        }
+    }
+
 }

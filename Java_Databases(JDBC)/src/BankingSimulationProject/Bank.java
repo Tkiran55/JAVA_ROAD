@@ -11,14 +11,14 @@ public class Bank {
 
     public static void main(String[] args) throws SQLException {
 
-        System.out.println("====================================");
-        System.out.println("-----Welcome To Bank-----");
-        System.out.println("====================================");
-
         boolean isRunning = true;
 
         while(isRunning) {
             if(UserId == -1) {
+
+                System.out.println("====================================");
+                System.out.println("-----Welcome To Bank-----");
+                System.out.println("====================================");
 
                 System.out.println("\n1. Create Account(For new Users only)");
                 System.out.println("2. Login Account(For existing user");
@@ -53,7 +53,7 @@ public class Bank {
                     case 1 -> System.out.println("Balance: " + manage.getBalance(UserId));
                     case 2 -> handleDeposit();
                     case 3 -> handleWithdraw();
-                    case 4 -> System.out.println("Soon...");
+                    case 4 -> handleTransfer();
                     case 5 -> {
                         UserId = -1;
                         System.out.println("Logged Out!");
@@ -115,6 +115,19 @@ public class Bank {
             System.out.println("Amount Withdraw!");
         }else{
             System.out.println("Insufficient Balance.");
+        }
+    }
+
+    public static void handleTransfer() throws SQLException {
+        System.out.print("Enter receiver name: ");
+        String toUsername = scanner.nextLine();
+        System.out.print("Enter amount: ");
+        double amount = scanner.nextDouble();
+
+        if(manage.transfer(UserId, toUsername,amount)){
+            System.out.println("Transfer Successful!");
+        }else{
+            System.out.println("Transfer Failed.");
         }
     }
 
