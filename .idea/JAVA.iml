@@ -13,6 +13,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Java_ThreadsAndConcurrency/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java_DataStructures/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java_Databases(JDBC)/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java_OPP/Library Management System" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BackendJourney/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

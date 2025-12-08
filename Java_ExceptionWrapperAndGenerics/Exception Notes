@@ -8,7 +8,7 @@ Without handling this, your program will crash.
 
 2. Handling Exceptions with try-catch
 
-public class Main {
+public class LibraryMain {
     public static void main(String[] args) {
         try {
             int result = 10 / 0;

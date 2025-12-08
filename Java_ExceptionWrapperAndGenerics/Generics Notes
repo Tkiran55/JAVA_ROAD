@@ -11,7 +11,7 @@ Generics allow the compiler to check types at compile time, preventing many runt
 Example: Without Generics
 import java.util.ArrayList;
 
-public class Main {
+public class LibraryMain {
     public static void main(String[] args) {
         ArrayList list = new ArrayList();
         list.add("Hello");
@@ -28,7 +28,7 @@ Here, you could accidentally add a wrong type (like an Integer) — which could 
 💻 Example: With Generics
 import java.util.ArrayList;
 
-public class Main {
+public class LibraryMain {
     public static void main(String[] args) {
         ArrayList<String> words = new ArrayList<>();
         words.add("Hello");
@@ -56,7 +56,7 @@ This means the box can hold an item of any single type.
 public void setItem(T item) and public T getItem():
 The getter and setter methods use the type parameter T, ensuring type safety for all interactions with the item.
 
-2. Using the Generic Class in Main
+2. Using the Generic Class in LibraryMain
 The main method shows how you bind the Type Parameter T to a specific type:
 
 Box<String> box = new Box<>();: Here,
